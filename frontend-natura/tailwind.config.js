@@ -40,6 +40,8 @@ export default {
       white: '#ffffff',
       inputGray: '#f0f0f0ff',
       inputGrayDark: '#e0e0e0ff',
+      pinkLight:'#ffeaeaff',
+      pinkDark: '#ff6868ff'
     }
   },
   plugins: [],
