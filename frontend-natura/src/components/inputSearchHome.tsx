@@ -7,7 +7,7 @@ export const SearchInputHome = () => {
       <input
         type="text"
         placeholder="O que está buscando hoje?"
-        className="outline-none w-[425px] bg-inputGray py-[8px] px-[20px] placeholder:text-gray-700"
+        className="outline-none w-[390px] bg-inputGray py-[8px] px-[20px] placeholder:text-gray-700"
       />
     </div>
   );
