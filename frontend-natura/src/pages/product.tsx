@@ -5,9 +5,23 @@ import { BreadCrumbsNatura } from "@/components/breadCrumbs";
 import { StarRating } from "@/components/starRating";
 import { ItensCart } from "@/components/itens-cart";
 import { IoBagAddOutline, IoLocationOutline } from "react-icons/io5";
+import { useEffect, useState } from "react";
+import { useNatura } from "@/context/naturaContext";
+import { IProductType } from "@/types/products.types";
+import { formatCurrency } from "@/helpers/formatCurrency";
 
 export default function Product() {
   const { id } = useParams();
+  const { products } = useNatura();
+  const [product, setProduct] = useState<IProductType>();
+
+  useEffect(() => {
+    filteredProduct();
+  }, []);
+  const filteredProduct = () =>
+    products
+      ?.filter((product) => product.id === id)
+      .map((product) => setProduct(product));
 
   return (
     <>
@@ -68,23 +82,23 @@ export default function Product() {
               </div>
             </div>
             <div className="h-[490px] flex-1 border-2 border-gray-600 p-4 rounded-[8px]">
-              <h3 className="text-2xl">
-                Presente Natura Homem Nós com Desodorante Corporal
-              </h3>
-              <p className="text-sm">NATURA HOMEM</p>
+              <h3 className="text-2xl">{product?.title}</h3>
+              <p className="text-sm">{product?.brand}</p>
               <div className="w-full h-14 flex justify-start items-center">
                 <StarRating rating={"4.5"} />
               </div>
               <p className="h-4 text-sm line-through text-gray-600">
-                R$ 264,00
+                {formatCurrency(product?.price ?? 0)}
               </p>
               <p className="text-2xl font-bold text-orange flex justify-start items-center mt-4 mb-2">
-                R$ 264,00
+                {formatCurrency(product?.price ?? 0)}
                 <span className="h-[20px] text-[0.8rem] ml-4 bg-orange text-white px-2 rounded-full flex justify-center items-center">
-                  -36%
+                  -{product?.discount?.percentage}%
                 </span>
               </p>
-              <p className="mb-4">À vista ou em até 5x de R$ 33,98 sem juros</p>
+              <p className="mb-4">
+                À vista ou em até 5x de R$ {(product?.price ?? 0) / 5} sem juros
+              </p>
               <div className="w-full h-[100px] flex justify-start items-center pl-4 pt-2 pb-2">
                 <ItensCart />
                 <button className="h-[42px] w-[180px] bg-orange flex justify-center items-center rounded-3xl">
