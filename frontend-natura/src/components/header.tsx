@@ -9,7 +9,6 @@ export const Header: React.FC = () => {
     <div className="w-8/12 h-24 bg-white flex justify-between items-center border-b-2 px-4">
       <div className="w-[20%]">
         <Link to={"/"}>
-          {/* <img src="/images/logo.png" alt="Logo Natura" /> */}
           <p className="text-[1.9rem] font-bold">Cosméticos&Co</p>
         </Link>
       </div>

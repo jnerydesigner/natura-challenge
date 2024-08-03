@@ -15,7 +15,7 @@ export const IntensCart: React.FC<ItensCartProps> = ({ lastProduct }) => {
     >
       <div className="w-[30%] ml-4 p-2">
         <img
-          src="/images/product.jpg"
+          src="https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg"
           alt="Products"
           className="rounded-[8px]"
         />

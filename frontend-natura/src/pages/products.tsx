@@ -9,7 +9,7 @@ export default function Products() {
     <>
       <Promotions />
       <Header />
-      <div className="w-8/12 h-[100vh] bg-white px-[20px]">
+      <div className="w-8/12 h-[auto] bg-white px-[20px]">
         <div className="h-[80px] flex justify-start items-center ml-4">
           <BreadCrumbsNatura page="Products" />
         </div>

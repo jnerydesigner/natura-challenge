@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 interface ButtonNaturaProps {
   title: string;
   bgColor: string;
@@ -11,10 +13,14 @@ export const ButtonNatura: React.FC<ButtonNaturaProps> = ({
   heightButton,
   widthButton,
 }) => {
+  const [hButton, setHButon] = useState(heightButton);
+  useEffect(() => {
+    setHButon(heightButton);
+  }, []);
   return (
     <button
       type="submit"
-      className={`rounded-[30px] font-bold text-white ${bgColor} h-[${heightButton}px] w-[${widthButton}%] `}
+      className={`rounded-[30px] font-bold text-white ${bgColor} h-[45px] w-[38%] `}
     >
       {title}
     </button>

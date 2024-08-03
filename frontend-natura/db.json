@@ -7,63 +7,307 @@
     "products": [
         {
             "id": "1",
-            "title": "a title",
+            "title": "Presente Natura Homem Nós com Desodorante Corporal",
+            "brand": "NATURA HOMEM",
             "price": 100,
-            "image": "image"
+            "discount": {
+                "percentage": 10,
+                "value": 10
+            },
+            "ratting": "1.0",
+            "image": [
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": false
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                }
+            ],
+            "description": "Presente Natura Homem Nós com Desodorante Corporal"
         },
         {
             "id": "2",
-            "title": "a title",
+            "title": "Presente Natura Homem Nós com Desodorante Corporal",
+            "brand": "NATURA HOMEM",
             "price": 100,
-            "image": "image"
+            "discount": {
+                "percentage": 10,
+                "value": 10
+            },
+            "ratting": "4.5",
+            "image": [
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": false
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                }
+            ],
+            "description": "Presente Natura Homem Nós com Desodorante Corporal"
         },
         {
             "id": "3",
-            "title": "a title",
+            "title": "Presente Natura Homem Nós com Desodorante Corporal",
+            "brand": "NATURA HOMEM",
             "price": 100,
-            "image": "image"
+            "discount": {
+                "percentage": 10,
+                "value": 10
+            },
+            "ratting": "4.5",
+            "image": [
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": false
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                }
+            ],
+            "description": "Presente Natura Homem Nós com Desodorante Corporal"
         },
         {
             "id": "4",
-            "title": "a title",
+            "title": "Presente Natura Homem Nós com Desodorante Corporal",
+            "brand": "NATURA HOMEM",
             "price": 100,
-            "image": "image"
+            "discount": {
+                "percentage": 10,
+                "value": 10
+            },
+            "ratting": "4.5",
+            "image": [
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": false
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                }
+            ],
+            "description": "Presente Natura Homem Nós com Desodorante Corporal"
         },
         {
             "id": "5",
-            "title": "a title",
+            "title": "Presente Natura Homem Nós com Desodorante Corporal",
+            "brand": "NATURA HOMEM",
             "price": 100,
-            "image": "image"
+            "discount": {
+                "percentage": 10,
+                "value": 10
+            },
+            "ratting": "4.5",
+            "image": [
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": false
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                }
+            ],
+            "description": "Presente Natura Homem Nós com Desodorante Corporal"
         },
         {
             "id": "6",
-            "title": "a title",
+            "title": "Presente Natura Homem Nós com Desodorante Corporal",
+            "brand": "NATURA HOMEM",
             "price": 100,
-            "image": "image"
+            "discount": {
+                "percentage": 10,
+                "value": 10
+            },
+            "ratting": "2,5",
+            "image": [
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": false
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                }
+            ],
+            "description": "Presente Natura Homem Nós com Desodorante Corporal"
         },
         {
             "id": "7",
-            "title": "a title",
+            "title": "Presente Natura Homem Nós com Desodorante Corporal",
+            "brand": "NATURA HOMEM",
             "price": 100,
-            "image": "image"
+            "discount": {
+                "percentage": 10,
+                "value": 10
+            },
+            "ratting": "3,0",
+            "image": [
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": false
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                }
+            ],
+            "description": "Presente Natura Homem Nós com Desodorante Corporal"
         },
         {
             "id": "8",
-            "title": "a title",
+            "title": "Presente Natura Homem Nós com Desodorante Corporal",
+            "brand": "NATURA HOMEM",
             "price": 100,
-            "image": "image"
-        },
-        {
-            "id": "9",
-            "title": "a title",
-            "price": 100,
-            "image": "image"
-        },
-        {
-            "id": "10",
-            "title": "a title",
-            "price": 100,
-            "image": "image"
+            "discount": {
+                "percentage": 10,
+                "value": 10
+            },
+            "ratting": "4.0",
+            "image": [
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": false
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg",
+                    "children": true
+                }
+            ],
+            "description": "Presente Natura Homem Nós com Desodorante Corporal"
         }
     ]
 }
