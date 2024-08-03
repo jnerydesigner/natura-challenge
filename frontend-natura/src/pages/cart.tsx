@@ -10,7 +10,7 @@ export default function Cart() {
     <>
       <Promotions />
       <Header />
-      <div className="w-8/12 bg-white">
+      <div className="w-8/12 bg-white px-[20px]">
         <div className="h-[80px] flex justify-start items-center ml-4">
           <BreadCrumbsNatura page="Carrinho" />
         </div>
