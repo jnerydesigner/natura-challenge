@@ -1,7 +1,11 @@
 export const Hero = () => {
   return (
     <div className="w-8/12 h-[auto] bg-gold relative">
-      <img src="/images/happy.png" alt="Hero Home" className="bg-contain" />
+      <img
+        src="https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/happy.png"
+        alt="Hero Home"
+        className="bg-contain"
+      />
       <div className="absolute top-[50%] left-[10%]">
         <h2 className="text-white font-bold text-[3rem]">Se Joga No arraiá</h2>
         <p className="text-white text-[0.7rem]">

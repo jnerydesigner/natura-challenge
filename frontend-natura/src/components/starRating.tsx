@@ -1,14 +1,15 @@
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 interface StarRatingProps {
-  rating: number;
+  rating: string;
 }
 
 export const StarRating: React.FC<StarRatingProps> = ({ rating }) => {
-  const fullStars = Math.floor(rating);
-  const halfStar = rating % 1 !== 0;
-  const emptyStars = Math.floor(5 - rating);
-  const formattedRating = rating.toFixed(1).replace(".", ",");
+  const ratingToNumber = Number(rating.replace(",", "."));
+  const fullStars = Math.floor(ratingToNumber);
+  const halfStar = ratingToNumber % 1 !== 0;
+  const emptyStars = Math.floor(5 - ratingToNumber);
+  const formattedRating = ratingToNumber.toFixed(1).replace(".", ",");
 
   return (
     <div className="flex items-center justify-center">

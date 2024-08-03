@@ -4,7 +4,11 @@ export const ProductUnit = () => {
   return (
     <div className="w-[70%] flex justify-center items-center ml-4">
       <div className="w-[25%]">
-        <img src="/images/product.jpg" alt="product" className="rounded-xl" />
+        <img
+          src="https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg"
+          alt="product"
+          className="rounded-xl"
+        />
       </div>
       <div className="w-[90%] flex justify-between items-start flex-col h-[150px] ml-2 p-4">
         <p className="text-[1.2rem] font-bold">Perfume Natura Homem</p>
