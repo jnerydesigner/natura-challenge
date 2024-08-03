@@ -1,4 +1,9 @@
 {
+    "user": {
+        "id": 1,
+        "name": "John Doe",
+        "email": "jonh.doe@email.com"
+    },
     "products": [
         {
             "id": "1",
