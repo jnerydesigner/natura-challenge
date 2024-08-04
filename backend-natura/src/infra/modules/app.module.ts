@@ -5,6 +5,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from '@presenters/app.controller';
 import { UsersModule } from './users.module';
 import { ProductsModule } from './product.module';
+import { OrderModule } from './order.module';
+import { OrderItensModule } from './order-itens.module';
+import { ShoppingCartModule } from './shopping-cart.module';
+import { ShoppingCartItensModule } from './shopping-cart-itens.module';
 
 
 @Module({
@@ -25,7 +29,11 @@ import { ProductsModule } from './product.module';
     logging: true,
   }),
   UsersModule,
-  ProductsModule
+  ProductsModule,
+  OrderModule,
+  OrderItensModule,
+  ShoppingCartModule,
+  ShoppingCartItensModule
 ],
   controllers: [AppController],
   providers: [AppService],

@@ -1,12 +1,17 @@
 import { UserRequerstDTO } from '@application/dtos/user-request.dto';
 import { UserEntity } from '@domain/entities/user.entity';
-import { UserRepository } from '@infra/database/user.repository';
+
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
 import * as bcrypt from 'bcrypt';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class UserService {
-  constructor(private readonly userRepository: UserRepository) {}
+  constructor(
+    @InjectRepository(UserEntity)
+    private readonly userRepository: Repository<UserEntity>,
+  ) {}
 
   async createUser(userRequest: UserRequerstDTO) {
     const user = UserEntity.createUser(
@@ -15,7 +20,8 @@ export class UserService {
       await this.hashPassword(userRequest.password),
     );
 
-    await this.userRepository.store(user);
+    const userCreate = this.userRepository.create(user);
+    await this.userRepository.save(userCreate);
   }
 
   async hashPassword(password: string) {
@@ -32,6 +38,6 @@ export class UserService {
   }
 
   findAll() {
-    return this.userRepository.findAll();
+    return this.userRepository.find();
   }
 }
