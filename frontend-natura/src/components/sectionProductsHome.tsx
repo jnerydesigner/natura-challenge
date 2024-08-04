@@ -10,7 +10,11 @@ export const SectionProductsHome = () => {
       </h2>
       <div className="w-[100%] h-[auto] grid grid-cols-4 gap-1 px-12 py-8">
         {products?.map((product) => (
-          <CardProductHome key={product.id} product={product} />
+          <CardProductHome
+            key={product.id}
+            product={product}
+            discountExists={product.discount.exists}
+          />
         ))}
       </div>
     </div>

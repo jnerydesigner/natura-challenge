@@ -1,6 +1,7 @@
 interface Discount {
     percentage: number;
     value: number;
+    exists: boolean;
 }
 
 interface Image {

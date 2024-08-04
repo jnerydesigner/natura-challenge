@@ -1,10 +1,11 @@
 import { BreadCrumbsNatura } from "@/components/breadCrumbs";
 import { Header } from "../components/header";
 import { Promotions } from "../components/promotions";
-import { ButtonNatura } from "@/components/buttonNatura";
 import { ProductUnit } from "@/components/productUnit";
+import { useNatura } from "@/context/naturaContext";
 
 export default function Products() {
+  const { products, cart } = useNatura();
   return (
     <>
       <Promotions />
@@ -14,13 +15,14 @@ export default function Products() {
           <BreadCrumbsNatura page="Products" />
         </div>
         <div className="h-[auto] w-[100%] flex justify-start items-start flex-col gap-4">
-          <ProductUnit />
-          <ProductUnit />
-          <ProductUnit />
-          <ProductUnit />
-          <ProductUnit />
-          <ProductUnit />
+          {products?.map((product) => (
+            <ProductUnit key={product.id} product={product} />
+          ))}
         </div>
+      </div>
+
+      <div className="absolute h-[300px] w-[300px] bg-gold right-2">
+        {cart?.id}
       </div>
     </>
   );

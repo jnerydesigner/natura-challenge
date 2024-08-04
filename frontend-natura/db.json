@@ -8,11 +8,12 @@
         {
             "id": "1",
             "title": "Presente Natura Homem Nós com Desodorante Corporal",
-            "brand": "NATURA HOMEM",
+            "brand": "NATURA HOMEM NATURE",
             "price": 100,
             "discount": {
                 "percentage": 10,
-                "value": 10
+                "value": 10,
+                "exists": true
             },
             "ratting": "1.0",
             "image": [
@@ -50,7 +51,8 @@
             "price": 100,
             "discount": {
                 "percentage": 10,
-                "value": 10
+                "value": 10,
+                "exists": false
             },
             "ratting": "4.5",
             "image": [
@@ -88,7 +90,8 @@
             "price": 100,
             "discount": {
                 "percentage": 10,
-                "value": 10
+                "value": 10,
+                "exists": true
             },
             "ratting": "4.5",
             "image": [
@@ -126,7 +129,8 @@
             "price": 100,
             "discount": {
                 "percentage": 10,
-                "value": 10
+                "value": 10,
+                "exists": true
             },
             "ratting": "4.5",
             "image": [
@@ -164,7 +168,8 @@
             "price": 100,
             "discount": {
                 "percentage": 10,
-                "value": 10
+                "value": 10,
+                "exists": true
             },
             "ratting": "4.5",
             "image": [
@@ -202,7 +207,8 @@
             "price": 100,
             "discount": {
                 "percentage": 10,
-                "value": 10
+                "value": 10,
+                "exists": true
             },
             "ratting": "2,5",
             "image": [
@@ -240,7 +246,8 @@
             "price": 100,
             "discount": {
                 "percentage": 10,
-                "value": 10
+                "value": 10,
+                "exists": true
             },
             "ratting": "3,0",
             "image": [
@@ -278,7 +285,8 @@
             "price": 100,
             "discount": {
                 "percentage": 10,
-                "value": 10
+                "value": 10,
+                "exists": true
             },
             "ratting": "4.0",
             "image": [
