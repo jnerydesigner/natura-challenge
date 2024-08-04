@@ -1,0 +1,34 @@
+services:
+  postgres-natura:
+    container_name: postgres-natura
+    image: postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: "123456"
+      POSTGRES_DB: "natura"
+    ports:
+      - "15433:5432"
+    volumes:
+      - postgres-natura-vol:/var/lib/postgresql/data
+    networks:
+      - postgres-natura-network
+
+
+  pgadmin-natura:
+    container_name: pgadmin-natura
+    image: dpage/pgadmin4
+    environment:
+       PGADMIN_DEFAULT_EMAIL: "jander.webmaster@gmail.com"
+       PGADMIN_DEFAULT_PASSWORD: "123456"
+    ports:
+      - "16544:80"
+    networks:
+      - postgres-natura-network
+
+networks:
+  postgres-natura-network:
+    driver: bridge
+
+volumes:
+  postgres-natura-vol:
+    driver: local
