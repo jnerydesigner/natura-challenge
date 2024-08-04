@@ -73,13 +73,15 @@ export default function Product() {
             </div>
 
             <div className="w-[630px] h-[500px] flex justify-center items-center ">
-              <div className="w-[78%]">
-                <img
-                  src="https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg"
-                  alt=""
-                  className="rounded-[8px] shadow-2xl"
-                />
-              </div>
+              {product?.image?.[0].url && (
+                <div className="w-[78%]">
+                  <img
+                    src={product?.image?.[0].url}
+                    alt={product?.title}
+                    className="rounded-[8px] shadow-2xl"
+                  />
+                </div>
+              )}
             </div>
             <div className="h-[490px] flex-1 border-2 border-gray-600 p-4 rounded-[8px]">
               <h3 className="text-2xl">{product?.title}</h3>

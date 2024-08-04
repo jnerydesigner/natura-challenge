@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { StarRating } from "./starRating";
 import { Link } from "react-router-dom";
 import { IProductType } from "@/types/products.types";
@@ -6,15 +5,15 @@ import { formatCurrency } from "@/helpers/formatCurrency";
 
 interface CardProductHomeProps {
   product: IProductType;
+  discountExists?: boolean;
 }
 
 export const CardProductHome: React.FC<CardProductHomeProps> = ({
   product,
+  discountExists,
 }) => {
-  const [discountExists, setDiscountExists] = useState(true);
-
   return (
-    <Link to={`/product/1`}>
+    <Link to={`/product/${product.id}`}>
       <div className="w-[100%] h-[400px] relative flex justify-center items-center flex-col">
         <div className="w-[90%]">
           <img
