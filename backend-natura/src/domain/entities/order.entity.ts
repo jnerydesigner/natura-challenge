@@ -5,8 +5,8 @@ import { OrderItemsEntity } from "./order_items.entity";
 
 @Entity({name:'orders'})
 export class OrderEntity{
-    @PrimaryGeneratedColumn({name:'order_id'})
-    orderId:number;
+    @PrimaryGeneratedColumn('uuid', {name:'order_id'})
+    orderId:string;
 
     @Column()
     userId:number;

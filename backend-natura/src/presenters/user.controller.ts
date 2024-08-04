@@ -1,0 +1,13 @@
+import { UserRequerstDTO } from '@application/dtos/user-request.dto';
+import { UserService } from '@application/services/user.service';
+import { Body, Controller, Post } from '@nestjs/common';
+
+@Controller('user')
+export class UserController {
+  constructor(private readonly userService: UserService) {}
+
+  @Post()
+  async createUser(@Body() body: UserRequerstDTO) {
+    return this.userService.createUser(body);
+  }
+}
