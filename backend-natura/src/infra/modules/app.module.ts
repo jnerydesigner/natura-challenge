@@ -9,6 +9,7 @@ import { OrderModule } from './order.module';
 import { OrderItensModule } from './order-itens.module';
 import { ShoppingCartModule } from './shopping-cart.module';
 import { ShoppingCartItensModule } from './shopping-cart-itens.module';
+import { ImageProductModule } from './image-product.module';
 
 
 @Module({
@@ -33,7 +34,8 @@ import { ShoppingCartItensModule } from './shopping-cart-itens.module';
   OrderModule,
   OrderItensModule,
   ShoppingCartModule,
-  ShoppingCartItensModule
+  ShoppingCartItensModule,
+  ImageProductModule
 ],
   controllers: [AppController],
   providers: [AppService],

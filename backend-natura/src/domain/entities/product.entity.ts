@@ -9,9 +9,21 @@ import {
 import { OrderItemsEntity } from './order_items.entity';
 import { ShoppingCartItemsEntity } from './shopping_cart_items.entity';
 import { ImageProductEntity } from './image-product.entity';
+import { randomUUID } from 'crypto';
 
 @Entity({ name: 'products' })
 export class ProductEntity {
+  constructor(
+    name: string,
+    description: string,
+    price: number,
+    productId: string,
+  ) {
+    this.productId = productId;
+    this.name = name;
+    this.description = description;
+    this.price = price;
+  }
   @PrimaryGeneratedColumn('uuid', { name: 'product_id' })
   productId: string;
 
@@ -41,4 +53,9 @@ export class ProductEntity {
     (shoppingItems) => shoppingItems.product,
   )
   carItems: ShoppingCartItemsEntity[];
+
+  static createProduct(name: string, description: string, price: number) {
+    const productId = randomUUID();
+    return new ProductEntity(name, description, price, productId);
+  }
 }
