@@ -5,8 +5,8 @@ import { ShoppingCartItemsEntity } from "./shopping_cart_items.entity";
 
 @Entity({ name: 'products' })
 export class ProductEntity {
-    @PrimaryGeneratedColumn({name: 'product_id'})
-    productId: number;
+    @PrimaryGeneratedColumn('uuid', {name: 'product_id'})
+    productId: string;
 
     @Column()
     name: string;

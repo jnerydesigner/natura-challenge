@@ -4,8 +4,8 @@ import { ShoppingCartItemsEntity } from "./shopping_cart_items.entity";
 
 @Entity({name:'shopping_cart'})
 export class ShoppingCartEntity{
-    @PrimaryGeneratedColumn({name: 'cart_id'})
-    cartId:number;
+    @PrimaryGeneratedColumn('uuid', {name: 'cart_id'})
+    cartId:string;
 
     @Column()
     userId:number;
