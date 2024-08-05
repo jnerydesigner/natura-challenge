@@ -20,6 +20,15 @@ entity "Products" as Products {
     updated_at : TIMESTAMP
 }
 
+entity "ImageProduct" as ImageProduct {
+    * image_product_id : INT <<PK>>
+    --
+    product_id : INT <<FK>>
+    url : VARCHAR(255)
+    created_at : TIMESTAMP
+    updated_at : TIMESTAMP
+}
+
 entity "Orders" as Orders {
     * order_id : INT <<PK>>
     --
@@ -65,4 +74,5 @@ Products ||--o{ OrderItems : "1:N"
 Users ||--|| ShoppingCart : "1:1"
 ShoppingCart ||--o{ ShoppingCartItems : "1:N"
 Products ||--o{ ShoppingCartItems : "1:N"
+Products ||--o{ ImageProduct : "1:N"
 @enduml
