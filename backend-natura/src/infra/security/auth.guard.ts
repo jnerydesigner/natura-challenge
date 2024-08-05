@@ -1,0 +1,60 @@
+import { IS_PUBLIC_REQUEST } from '@application/decorators/public-request.decorator';
+import { InvalidAuthorizationHeaderException } from '@infra/exceptions/invalid-authorization-header.exception';
+import { InvalidCredentialsException } from '@infra/exceptions/invalid-credentials.exception';
+import {
+  CanActivate,
+  ExecutionContext,
+  Injectable,
+  UnauthorizedException,
+} from '@nestjs/common';
+import { Reflector } from '@nestjs/core';
+import { JwtService } from '@nestjs/jwt';
+import { Request } from 'express';
+import { Observable } from 'rxjs';
+
+@Injectable()
+export class AuthGuard implements CanActivate {
+  constructor(
+    private jwtService: JwtService,
+    private reflector: Reflector,
+  ) {}
+
+  async canActivate(context: ExecutionContext): Promise<boolean> {
+    const isPublic = this.reflector.getAllAndOverride<boolean>(
+      IS_PUBLIC_REQUEST,
+      [context.getHandler(), context.getClass()],
+    );
+
+    if (isPublic) {
+      return true;
+    }
+
+    const request = context.switchToHttp().getRequest();
+    const token = this.extractTokenFromHeader(request);
+
+    if (!token) {
+      new UnauthorizedException('Token not found');
+    }
+
+    try {
+      const payload = await this.jwtService.verifyAsync(token, {
+        secret: process.env.JWT_SECRET,
+      });
+      request.user = payload;
+    } catch {
+      throw new InvalidCredentialsException();
+    }
+
+    return true;
+  }
+
+  private extractTokenFromHeader(request: Request): string | undefined {
+    const authHeader = request.headers.authorization;
+    if (!authHeader) {
+      throw new InvalidAuthorizationHeaderException();
+    }
+    const [type, token] = authHeader.split(' ');
+
+    return type === 'Bearer' ? token : undefined;
+  }
+}
