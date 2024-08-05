@@ -35,7 +35,7 @@ export type OrderItemsTypeormDto = {
 export type ProductTypeormDto = {
   productId?: string;
   name: string;
-  description: string;
+  description?: string;
   price: number;
   createdAt?: Date;
   updatedAt?: Date;
