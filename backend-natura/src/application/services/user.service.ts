@@ -20,6 +20,18 @@ export class UserService {
       await this.hashPassword(userRequest.password),
     );
 
+    const userExists = await this.userRepository.findOne({
+      where: {
+        email: user.email,
+      },
+    });
+
+    if (userExists) {
+      return {
+        message: 'User already exists',
+      };
+    }
+
     const userCreate = this.userRepository.create(user);
     await this.userRepository.save(userCreate);
   }
@@ -39,5 +51,13 @@ export class UserService {
 
   findAll() {
     return this.userRepository.find();
+  }
+
+  async findOneUser(username: string) {
+    return this.userRepository.findOne({
+      where: {
+        email: username,
+      },
+    });
   }
 }
