@@ -1,7 +1,7 @@
 import { ProductTypeormDto } from '@application/dtos/product-typeorm.dto';
 import { ProductEntity } from '@domain/entities/product.entity';
 import { getRandomRating } from '@infra/utils/random-ratting.util';
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
@@ -10,11 +10,15 @@ const descriptionProduct =
 
 @Injectable()
 export class ProductService {
+  private logger: Logger;
   constructor(
     @InjectRepository(ProductEntity)
     private readonly productRepository: Repository<ProductEntity>,
-  ) {}
-  async findAll(page: number = 1, limit: number = 5) {
+  ) {
+    this.logger = new Logger(ProductService.name);
+  }
+  async findAll(page: number, limit: number) {
+    this.logger.log(`findAll page: ${Number(page)} limit: ${limit}`);
     const [result, total] = await this.productRepository.findAndCount({
       relations: {
         productImage: true,
@@ -49,5 +53,23 @@ export class ProductService {
       product.rating = getRandomRating();
       await this.productRepository.save(product);
     });
+  }
+
+  async findOne(productId: string) {
+    console.log(productId);
+    const producExists = await this.productRepository.findOne({
+      where: {
+        productId,
+      },
+      relations: {
+        productImage: true,
+      },
+    });
+
+    if (!producExists) {
+      throw new NotFoundException('Product not found');
+    }
+
+    return producExists;
   }
 }

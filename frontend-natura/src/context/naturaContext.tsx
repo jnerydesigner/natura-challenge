@@ -25,9 +25,9 @@ export const NaturaProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const fetchProduct = async () => {
     try {
-      const { data } = await Api.get("/products");
+      const { data } = await Api.get("/products?page=1&limit=4");
       setProducts(data);
-      console.log(data);
+      console.log("Data log", data);
     } catch (error) {
       console.error("Failed to fetch products", error);
       setProducts(null); // ou algum outro valor de fallback ou mensagem de erro
