@@ -36,6 +36,9 @@ export class ProductEntity {
   @Column('decimal', { precision: 10, scale: 2 })
   price: number;
 
+  @Column('decimal', { precision: 2, scale: 1, default: 0 })
+  rating: string;
+
   @CreateDateColumn()
   createdAt: Date;
 

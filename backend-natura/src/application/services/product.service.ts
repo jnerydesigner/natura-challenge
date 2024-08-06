@@ -1,5 +1,6 @@
 import { ProductTypeormDto } from '@application/dtos/product-typeorm.dto';
 import { ProductEntity } from '@domain/entities/product.entity';
+import { getRandomRating } from '@infra/utils/random-ratting.util';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -40,5 +41,13 @@ export class ProductService {
     const productCreateInstance = this.productRepository.create(productCreate);
 
     return this.productRepository.save(productCreateInstance);
+  }
+
+  async generateRating() {
+    const products = await this.productRepository.find();
+    products.map(async (product) => {
+      product.rating = getRandomRating();
+      await this.productRepository.save(product);
+    });
   }
 }

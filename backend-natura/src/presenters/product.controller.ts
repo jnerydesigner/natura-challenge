@@ -17,4 +17,9 @@ export class productController {
   create(@Body() input: ProductTypeormDto) {
     return this.productService.create(input);
   }
+
+  @Get('generate-rating')
+  generateRating() {
+    return this.productService.generateRating();
+  }
 }
