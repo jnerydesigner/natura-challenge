@@ -1,6 +1,9 @@
+import { getRandomRating } from '@infra/utils/random-ratting.util';
+
 export const ProductsDatas = [
   {
     productId: '519a8901-4cd7-4843-ba58-4c180eb18362',
+    rating: getRandomRating(),
     name: 'Condicionador Provitalidade para Cabelos Quimicamente Danificados Lumina',
     description:
       'Recuperação profunda e imediata dos fios quimicamente danificados.A linha para Cabelos Quimicamente Danificados de Lumina mudou! Agora o seu Sistema de Reconstrução de Danos Extremos tem novas embalagens, nova fragrância e ainda mais tecnologia para cuidar do seu cabelo. Com BioProteína Tripla Ação e Ativo Reconstrutor, esse sistema promove reconstrução de até 89% dos danos extremos e prevenção de até 2,9 vezes dos danos futuros*. O Condicionado Provitalidade para Cabelos Quimicamente Danificados Lumina é um passo essencial nesse ritual, com fórmula que promove 2 vezes mais reparação interna dos fios e deixa o cabelo 2 vezes mais fácil de pentear.',
@@ -36,6 +39,7 @@ export const ProductsDatas = [
   },
   {
     productId: '4681a1f5-7ea1-4686-9da5-e2e5b6678f04',
+    rating: getRandomRating(),
     name: 'Desodorante Corporal Natura Homem',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -71,6 +75,7 @@ export const ProductsDatas = [
   },
   {
     productId: '45485aa1-12e6-4a81-8c49-95ca4c8b776c',
+    rating: getRandomRating(),
     name: 'Eau de Parfum Natura 740 Sândalo Breu Branco 50 ml Seed 2',
     description:
       'CUm convite a sentir os cheiros vibrantes da natureza. Combinações autorais e exclusivas dos nossos proprietários ingredientes naturais latino-americanos com ingredientes clássicos da perfumaria mundial, que surpreendem os sentidos e as emoções. Natura 740 Eau de Parfum traz uma combinação exclusiva dos óleos naturais do sândalo, um clássico da perfumaria mundial, e do breu branco, resina nativa da Amazônia.',
@@ -81,6 +86,7 @@ export const ProductsDatas = [
   },
   {
     productId: '3ac8f846-3fa3-4ee9-a36c-39eeb0eae77e',
+    rating: getRandomRating(),
     name: 'Eau de Parfum Natura 740 Sândalo Breu Branco 50 ml Seed 3',
     description:
       'CUm convite a sentir os cheiros vibrantes da natureza. Combinações autorais e exclusivas dos nossos proprietários ingredientes naturais latino-americanos com ingredientes clássicos da perfumaria mundial, que surpreendem os sentidos e as emoções. Natura 740 Eau de Parfum traz uma combinação exclusiva dos óleos naturais do sândalo, um clássico da perfumaria mundial, e do breu branco, resina nativa da Amazônia.',
@@ -91,6 +97,7 @@ export const ProductsDatas = [
   },
   {
     productId: '33a1ee4a-0e74-4252-be11-728f546f40d0',
+    rating: getRandomRating(),
     name: 'Refil Desodorante Corporal Kaiak Masculino',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -110,6 +117,7 @@ export const ProductsDatas = [
   },
   {
     productId: '1bad80c1-b422-48d5-85d0-941fd5961a3e',
+    rating: getRandomRating(),
     name: 'Creme para Pentear Condicionador Multibenefícios Ekos Murumuru',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -145,6 +153,7 @@ export const ProductsDatas = [
   },
   {
     productId: '16eb65db-8e66-4835-8823-fea8f134b631',
+    rating: getRandomRating(),
     name: 'Eau de Parfum Natura 740 Sândalo Breu Branco 50 ml Seed',
     description:
       'CUm convite a sentir os cheiros vibrantes da natureza. Combinações autorais e exclusivas dos nossos proprietários ingredientes naturais latino-americanos com ingredientes clássicos da perfumaria mundial, que surpreendem os sentidos e as emoções. Natura 740 Eau de Parfum traz uma combinação exclusiva dos óleos naturais do sândalo, um clássico da perfumaria mundial, e do breu branco, resina nativa da Amazônia.',
@@ -155,6 +164,7 @@ export const ProductsDatas = [
   },
   {
     productId: '1cf5b48a-8e97-4c77-bdb1-675bd416c7d8',
+    rating: getRandomRating(),
     name: 'Eau de Parfum Natura 740 Sândalo Breu Branco 50 ml Seed 4',
     description:
       'CUm convite a sentir os cheiros vibrantes da natureza. Combinações autorais e exclusivas dos nossos proprietários ingredientes naturais latino-americanos com ingredientes clássicos da perfumaria mundial, que surpreendem os sentidos e as emoções. Natura 740 Eau de Parfum traz uma combinação exclusiva dos óleos naturais do sândalo, um clássico da perfumaria mundial, e do breu branco, resina nativa da Amazônia.',
@@ -165,6 +175,7 @@ export const ProductsDatas = [
   },
   {
     productId: 'b2c47010-89be-4046-ab32-97254db2f8d6',
+    rating: getRandomRating(),
     name: 'Una Infinito 75 ml',
     description:
       'Una a sofisticação do brilho ao infinito das cores. Inspirada nas misteriosas combinações da Galáxia, essa fragrância carrega consigo uma explosão de brilho criada pela combinação da cremosa ameixa negra à notas amadeiradas e cítricas. Intenso e adocicado para combinar com o look da sua maquiagem da Coleção Infinito.',
@@ -208,6 +219,7 @@ export const ProductsDatas = [
   },
   {
     productId: '538d408d-d5e7-43e1-9ec5-9a9128eae14d',
+    rating: getRandomRating(),
     name: 'Presente Natura Homem Nós com Desodorante Corporal',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -243,6 +255,7 @@ export const ProductsDatas = [
   },
   {
     productId: '8db79293-8c44-416c-b020-6b23db87f386',
+    rating: getRandomRating(),
     name: 'Shampoo Estimulante Antiqueda e Crescimento Lumina',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -269,6 +282,7 @@ export const ProductsDatas = [
   },
   {
     productId: 'fcd1e134-cbc6-4fd9-bcf4-e6b5023dd7ad',
+    rating: getRandomRating(),
     name: 'Kit Tododia Todanoite Chá de Camomila e Lavanda',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -287,6 +301,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Kaiak Masculino 100 ml',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -320,6 +335,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Máscara Fortalecedora Ekos Patauá',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -343,6 +359,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Sérum Noturno Antiqueda e Crescimento Lumina',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -366,6 +383,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Sabonete Gel para o Rosto Faces',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -389,6 +407,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Água Micelar Purificante Chronos',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -412,6 +431,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Demaquilante Líquido Faces',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -430,6 +450,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Super Sérum Redutor de Rugas Chronos',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -458,6 +479,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Balm Redutor de Rugas para Olhos Chronos',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -476,6 +498,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Esfoliante Antissinais Chronos',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -499,6 +522,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Elixir Redutor de Rugas Chronos',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -522,6 +546,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Presente Natura Horus',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -545,6 +570,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Presente Natura Homem Emocione Trio de Sabonetes',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -568,6 +594,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Presente Natura Homem Cuidados Pessoais Barba',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -591,6 +618,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Presente Natura Una Beauty Box',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -614,6 +642,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Presente Natura Essencial Exclusivo Feminino',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -637,6 +666,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Sabonete Líquido Mãos Natura Bothânica Ficus Herb',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -660,6 +690,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Spray de Ambientes Natura Bothânica Divinus Plantae',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -683,6 +714,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Vela Natura Bothânica Divinus Plantae',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -706,6 +738,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Presente Natura Naturé Banho de Chuva com Mochila Jacarezinho',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -729,6 +762,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Presente Natura Mamãe e Bebê Momento Banho',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -752,6 +786,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Presente Natura Momento Papai e Bebê',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',
@@ -775,6 +810,7 @@ export const ProductsDatas = [
     ],
   },
   {
+    rating: getRandomRating(),
     name: 'Presente Natura Naturé Banho de Chuva',
     description:
       'Celebre todas as maneiras de ser homem com o Presente Natura Homem Nós. Convidamos os homens a se expressarem como realmente são, livres de padrões ou estereótipos, cuidando-se à sua maneira. O presente oferece uma linha de perfumaria e cuidados pessoais na fragrância amadeirada ambarada de Natura Homem Nós, que contém o Deo Parfum e o Desodorante Corporal. Uma escolha marcante e sofisticada para presentear. Acompanha uma caixa especial de presente.',

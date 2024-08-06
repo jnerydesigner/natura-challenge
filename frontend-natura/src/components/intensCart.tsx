@@ -1,12 +1,15 @@
+import { formatCurrency } from "@/helpers/formatCurrency";
+import { ICartItem } from "@/types/cart.types";
 import { BsFillTrash3Fill } from "react-icons/bs";
 import { FiPlus } from "react-icons/fi";
 import { TbMinus } from "react-icons/tb";
 
 interface ItensCartProps {
   lastProduct: boolean;
+  item: ICartItem;
 }
 
-export const IntensCart: React.FC<ItensCartProps> = ({ lastProduct }) => {
+export const IntensCart: React.FC<ItensCartProps> = ({ lastProduct, item }) => {
   return (
     <div
       className={`h-[200px] flex justify-center items-center  ml-4 ${
@@ -15,14 +18,18 @@ export const IntensCart: React.FC<ItensCartProps> = ({ lastProduct }) => {
     >
       <div className="w-[30%] ml-4 p-2">
         <img
-          src="https://raw.githubusercontent.com/jnerydesigner/natura-challenge/main/frontend-natura/public/images/product.jpg"
-          alt="Products"
+          src={item.product.productImage?.[0].imageUrl}
+          alt={item.product.name}
           className="rounded-[8px]"
         />
       </div>
       <div className="h-[100%] flex flex-1 justify-between items-start flex-col">
-        <p className="text-[1.2rem] font-bold mt-4 ml-2">Natura Homem</p>
-        <p className="text-[1.4rem] font-bold mb-4 ml-2">R$ 145,00</p>
+        <p className="text-[1.2rem] font-bold mt-4 ml-2">
+          {item.product.name} - {String(lastProduct)}
+        </p>
+        <p className="text-[1.4rem] font-bold mb-4 ml-2">
+          {formatCurrency(Number(item.price))}
+        </p>
       </div>
       <div className="h-[100%] flex justify-between items-end flex-col">
         <button className="h-[20px] w-[20px] flex justify-center items-center m-4">

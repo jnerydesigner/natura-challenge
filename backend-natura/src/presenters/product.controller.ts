@@ -1,7 +1,7 @@
 import { Public } from '@application/decorators/public-request.decorator';
 import { ProductTypeormDto } from '@application/dtos/product-typeorm.dto';
 import { ProductService } from '@application/services/product.service';
-import { Body, Controller, Get, Post, Query } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 
 @Controller('products')
 export class productController {
@@ -10,11 +10,23 @@ export class productController {
   @Get()
   @Public()
   findAll(@Query('page') page: number, @Query('limit') limit: number) {
+    console.log(page, limit);
     return this.productService.findAll(+page, +limit);
   }
 
   @Post()
   create(@Body() input: ProductTypeormDto) {
     return this.productService.create(input);
+  }
+
+  @Get('generate-rating')
+  generateRating() {
+    return this.productService.generateRating();
+  }
+
+  @Get('/one/:productId')
+  @Public()
+  findOne(@Param('productId') productId: string) {
+    return this.productService.findOne(productId);
   }
 }
