@@ -2,10 +2,18 @@ import { BreadCrumbsNatura } from "@/components/breadCrumbs";
 import { Header } from "../components/header";
 import { Promotions } from "../components/promotions";
 import { ProductUnit } from "@/components/productUnit";
-import { useNatura } from "@/context/naturaContext";
+
+import { useQuery } from "@tanstack/react-query";
+import { fetchGetProducts } from "@/actions/get-products";
 
 export default function Products() {
-  const { products, cart } = useNatura();
+  const { data } = useQuery({
+    queryKey: ["productsList"],
+    queryFn: async () => {
+      const data = await fetchGetProducts(1, 10);
+      return data;
+    },
+  });
   return (
     <>
       <Promotions />
@@ -15,15 +23,15 @@ export default function Products() {
           <BreadCrumbsNatura page="Products" />
         </div>
         <div className="h-[auto] w-[100%] flex justify-start items-start flex-col gap-4">
-          {products?.map((product) => (
-            <ProductUnit key={product.id} product={product} />
+          {data?.products?.map((product) => (
+            <ProductUnit key={product.productId} product={product} />
           ))}
         </div>
       </div>
 
-      <div className="absolute h-[300px] w-[300px] bg-gold right-2">
+      {/* <div className="absolute h-[300px] w-[300px] bg-gold right-2">
         {cart?.id}
-      </div>
+      </div> */}
     </>
   );
 }

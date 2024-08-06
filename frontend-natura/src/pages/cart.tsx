@@ -4,8 +4,10 @@ import { Promotions } from "../components/promotions";
 
 import { IntensCart } from "@/components/intensCart";
 import { Summary } from "@/components/summary";
+import { useCartData } from "@/context/useCartData";
 
 export default function Cart() {
+  const { data } = useCartData();
   return (
     <>
       <Promotions />
@@ -19,10 +21,13 @@ export default function Cart() {
         </div>
         <div className="h-[auto] grid grid-cols-2 gap-4 ">
           <div className="h-[auto]  flex justify-center items-center flex-col p-2 border-2 border-gray-500 m-2 rounded-[16px]">
-            <IntensCart lastProduct={true} />
-            <IntensCart lastProduct={true} />
-            <IntensCart lastProduct={true} />
-            <IntensCart lastProduct={false} />
+            {data?.cartItems.map((item, index) => (
+              <IntensCart
+                key={item.product.productId}
+                lastProduct={index !== data.cartItems.length - 1}
+                item={item}
+              />
+            ))}
           </div>
           <Summary />
         </div>

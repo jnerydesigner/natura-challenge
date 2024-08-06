@@ -19,7 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <main className="w-[100%] h-[auto] flex justify-start items-center flex-col bg-graylight">
         <RouterNatura />
       </main>
-      <ReactQueryDevtools initialIsOpen={true} />
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   </React.StrictMode>
 );

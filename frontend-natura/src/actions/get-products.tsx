@@ -1,4 +1,5 @@
 import { Api } from "@/api/api";
+import { UserInfo } from "@/constants/user";
 import {
   IProductResponse,
   IProductsResponse,
@@ -17,5 +18,25 @@ export const fetchGetProductOne = async (productId: string | undefined) => {
     `/products/one/${productId}`
   );
 
+  return data;
+};
+
+export const fetchCreateCart = async (productId: string) => {
+  const userId = UserInfo;
+  const cart = {
+    userId,
+    productId,
+  };
+  const { data } = await Api.post("/shopping-cart", cart);
+  return data;
+};
+
+export const fetchC = async (productId: string) => {
+  const userId = UserInfo;
+  const cart = {
+    userId,
+    productId,
+  };
+  const { data } = await Api.post("/shopping-cart", cart);
   return data;
 };

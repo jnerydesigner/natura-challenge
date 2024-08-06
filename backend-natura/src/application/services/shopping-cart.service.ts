@@ -327,4 +327,25 @@ export class ShoppingCartService {
       },
     });
   }
+
+  async findCart(cartId: string) {
+    const cart = await this.shoopingCartRepository.findOne({
+      where: {
+        cartId,
+      },
+      relations: {
+        cartItems: {
+          product: {
+            productImage: true,
+          },
+        },
+      },
+    });
+
+    if (!cart) {
+      throw new NotFoundException('Cart not found');
+    }
+
+    return cart;
+  }
 }
