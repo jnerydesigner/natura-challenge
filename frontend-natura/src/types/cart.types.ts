@@ -36,9 +36,23 @@ export interface ICartItem {
   updatedAt: string;
 }
 
+export interface ICartCoupon {
+  percentage: string;
+  value: string;
+  couponCode: string;
+  expirationDate: string;
+  couponId: string;
+  type: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface ICartResponse {
   userId: string;
   cartId: string;
+  total?: string;
+  oldTotal?: string;
+  coupon?: ICartCoupon;
   createdAt: string;
   updatedAt: string;
   cartItems: ICartItem[];

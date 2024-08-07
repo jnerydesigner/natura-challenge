@@ -108,3 +108,17 @@ export const removeItemCartOne = async (itemCartId: string) => {
   const { data } = await Api.delete(`/shopping-cart/cart/${itemCartId}`);
   return data;
 };
+
+export const addCouponInCart = async (couponCode: string, cartId: string) => {
+  const coupon = {
+    couponCode,
+    cartId,
+  };
+
+  const { data } = await Api.patch(
+    `/shopping-cart/cart/coupon/applied_coupon`,
+    coupon
+  );
+
+  return data;
+};
