@@ -30,6 +30,15 @@ docker-compose up -d
 
 yarn seed:run
 
+yarn start:dev
+
+```
+
+2.1 Navegue até a pasta de frontend e rode os seguintes comandos:
+
+```
+dev
+
 ```
 
 3. Já cria um carrinho, pois a implementação ficou faltando, sem tempo, eu estava criando uma autenticação também, funcional, mas ainda faltando ajustes.
