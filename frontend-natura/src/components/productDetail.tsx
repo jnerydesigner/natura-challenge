@@ -23,9 +23,10 @@ interface MutationProps {
 export const ProductDetail: React.FC<ProductDetailProps> = ({
   dataProductResponse: data,
 }) => {
-  const { id: productId } = useParams();
+  const { id: productId } = useParams<{ id: string }>();
+  const safeProductId = productId ?? "";
   useEffect(() => {
-    addProductInLocalStorage(productId);
+    addProductInLocalStorage(safeProductId);
   }, []);
   const [cartId, setCartId] = useState<string>("");
   const [userId, setUserId] = useState<string>("");
