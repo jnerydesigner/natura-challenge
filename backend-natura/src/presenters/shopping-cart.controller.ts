@@ -14,63 +14,76 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
 @Controller('shopping-cart')
+@ApiTags('Shopping Cart')
 export class ShoppingCartController {
   constructor(private readonly shoppingCartService: ShoppingCartService) {}
 
   @Post()
   @Public()
+  @ApiOperation({ summary: 'Create cart' })
   async createCart(@Body() cart: CreateCartDTO) {
     return this.shoppingCartService.createCart(cart.userId, cart.productId);
   }
 
   @Get()
+  @ApiOperation({ summary: 'List all carts' })
   async getCarts() {
     return this.shoppingCartService.findAll();
   }
 
   @Patch()
+  @ApiOperation({ summary: 'Update cart' })
   async updateCart(@Body() cart: UpdatedCartDTO) {
     return this.shoppingCartService.updatedCart(cart);
   }
 
   @Delete()
+  @ApiOperation({ summary: 'Delete cart' })
   async deleteItemCart(@Body() cart: DeleteItemCartDTO) {
     return this.shoppingCartService.deleteProductCart(cart);
   }
 
+  @ApiOperation({ summary: 'Add item to cart' })
   @Patch('/add-item')
   async addItemCart(@Body() cart: UpdatedCartDTO) {
     return this.shoppingCartService.addItemCart(cart);
   }
 
+  @ApiOperation({ summary: 'Remove item to cart' })
   @Patch('/remove-item')
   async removeItemCart(@Body() cart: UpdatedCartDTO) {
     return this.shoppingCartService.removeItemCart(cart);
   }
 
+  @ApiOperation({ summary: 'Get Total Itens Cart' })
   @Get('/total')
   async getTotalCart() {
     return this.shoppingCartService.findAllCartItems();
   }
 
   @Get('/cart/:cartId')
+  @ApiOperation({ summary: 'Get Cart' })
   @Public()
   async getCartItems(@Param('cartId') cartId: string) {
     return this.shoppingCartService.findCart(cartId);
   }
 
+  @ApiOperation({ summary: 'Get Total Itens Cart' })
   @Get('/cart/:cartId/total-items')
   getTotalItens(@Param('cartId') cartId: string) {
     return this.shoppingCartService.getTotalItens(cartId);
   }
 
+  @ApiOperation({ summary: 'Delete Item CartId' })
   @Delete('/cart/:itemCartId')
   deleteItemCartId(@Param('itemCartId') itemCartId: string) {
     return this.shoppingCartService.removeOneItemCart(itemCartId);
   }
 
+  @ApiOperation({ summary: 'Apply Coupon' })
   @Patch('/cart/coupon/applied_coupon')
   appliedCoupon(@Body() cart: { cartId: string; couponCode: string }) {
     return this.shoppingCartService.appliedCoupon(cart.cartId, cart.couponCode);
