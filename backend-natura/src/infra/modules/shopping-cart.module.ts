@@ -1,4 +1,5 @@
 import { ShoppingCartService } from '@application/services/shopping-cart.service';
+import { CouponEntity } from '@domain/entities/coupon.entity';
 import { ProductEntity } from '@domain/entities/product.entity';
 import { ShoppingCartEntity } from '@domain/entities/shopping_cart.entity';
 import { ShoppingCartItemsEntity } from '@domain/entities/shopping_cart_items.entity';
@@ -12,6 +13,7 @@ import { ShoppingCartController } from '@presenters/shopping-cart.controller';
       ShoppingCartEntity,
       ShoppingCartItemsEntity,
       ProductEntity,
+      CouponEntity,
     ]),
   ],
   providers: [ShoppingCartService],

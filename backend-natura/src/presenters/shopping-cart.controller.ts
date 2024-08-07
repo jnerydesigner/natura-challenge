@@ -70,4 +70,9 @@ export class ShoppingCartController {
   deleteItemCartId(@Param('itemCartId') itemCartId: string) {
     return this.shoppingCartService.removeOneItemCart(itemCartId);
   }
+
+  @Patch('/cart/coupon/applied_coupon')
+  appliedCoupon(@Body() cart: { cartId: string; couponCode: string }) {
+    return this.shoppingCartService.appliedCoupon(cart.cartId, cart.couponCode);
+  }
 }

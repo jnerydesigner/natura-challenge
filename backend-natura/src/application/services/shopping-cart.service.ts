@@ -2,10 +2,12 @@ import {
   DeleteItemCartDTO,
   UpdatedCartDTO,
 } from '@application/dtos/create-cart.dto';
+import { CouponEntity } from '@domain/entities/coupon.entity';
 import { ProductEntity } from '@domain/entities/product.entity';
 import { ShoppingCartEntity } from '@domain/entities/shopping_cart.entity';
 import { ShoppingCartItemsEntity } from '@domain/entities/shopping_cart_items.entity';
 import { AppDataSource } from '@infra/database/data-source';
+import { CartResponseMapper } from '@infra/database/mappers/cart-response.mapper';
 import { NotFoundException } from '@infra/exceptions/not-found.exception';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -21,6 +23,8 @@ export class ShoppingCartService {
     private readonly shoppingCartItemsRepository: Repository<ShoppingCartItemsEntity>,
     @InjectRepository(ProductEntity)
     private readonly productRepository: Repository<ProductEntity>,
+    @InjectRepository(CouponEntity)
+    private readonly couponRepository: Repository<CouponEntity>,
   ) {}
 
   async createCart(userId: string, productId: string): Promise<any> {
@@ -329,11 +333,12 @@ export class ShoppingCartService {
   }
 
   async findCart(cartId: string) {
-    const cart = await this.shoopingCartRepository.findOne({
+    let cart = await this.shoopingCartRepository.findOne({
       where: {
         cartId,
       },
       relations: {
+        coupon: true,
         cartItems: {
           product: {
             productImage: true,
@@ -342,11 +347,27 @@ export class ShoppingCartService {
       },
     });
 
+    console.log(cart);
+
+    if (cart.coupon === null || cart.coupon === undefined) {
+      cart.coupon = {
+        percentage: 0,
+        value: 0,
+        couponCode: '',
+        expirationDate: new Date(),
+        couponId: '',
+        type: '',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        couponProduct: null,
+      };
+    }
+
     if (!cart) {
       throw new NotFoundException('Cart not found');
     }
 
-    return cart;
+    return CartResponseMapper.toResponse(cart);
   }
 
   async getTotalItens(cartId: string) {
@@ -382,5 +403,50 @@ export class ShoppingCartService {
     }
 
     await this.shoppingCartItemsRepository.delete(itemCartId);
+  }
+
+  async appliedCoupon(cartId: string, couponCode: string) {
+    const couponExists = await this.couponRepository.findOne({
+      where: {
+        couponCode,
+      },
+    });
+
+    if (!couponExists) {
+      throw new NotFoundException('Coupon not found');
+    }
+
+    let cartExists = await this.shoopingCartRepository.findOne({
+      where: {
+        cartId,
+      },
+      relations: {
+        cartItems: {
+          product: true,
+        },
+      },
+    });
+
+    if (!cartExists) {
+      throw new NotFoundException('Cart not found');
+    }
+
+    cartExists.coupon = couponExists;
+
+    await this.shoopingCartRepository.save(cartExists);
+
+    cartExists = await this.shoopingCartRepository.findOne({
+      where: {
+        cartId,
+      },
+      relations: {
+        coupon: true,
+        cartItems: {
+          product: true,
+        },
+      },
+    });
+
+    return CartResponseMapper.toResponse(cartExists);
   }
 }

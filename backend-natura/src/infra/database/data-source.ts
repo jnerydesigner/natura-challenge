@@ -9,6 +9,7 @@ import { ProductEntity } from '@domain/entities/product.entity';
 import { ShoppingCartEntity } from '@domain/entities/shopping_cart.entity';
 import { ShoppingCartItemsEntity } from '@domain/entities/shopping_cart_items.entity';
 import { UserEntity } from '@domain/entities/user.entity';
+import { CouponEntity } from '@domain/entities/coupon.entity';
 
 const portDb = parseInt(process.env.DB_PORT) || 15433;
 
@@ -27,6 +28,7 @@ const options: DataSourceOptions & SeederOptions = {
     ShoppingCartItemsEntity,
     ImageProductEntity,
     OrderItemsEntity,
+    CouponEntity,
   ],
   seeds: [MainSeed],
   synchronize: false,

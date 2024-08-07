@@ -5,6 +5,8 @@ import RouterNatura from "./router";
 
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { NaturaProvider } from "./context/naturaContext";
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -16,9 +18,12 @@ const queryClient = new QueryClient({
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <main className="w-[100%] h-full flex justify-start items-center flex-col bg-gray-200">
-        <RouterNatura />
-      </main>
+      <NaturaProvider>
+        <main className="w-[100%] h-full flex justify-start items-center flex-col bg-gray-200">
+          <RouterNatura />
+        </main>
+      </NaturaProvider>
+
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   </React.StrictMode>

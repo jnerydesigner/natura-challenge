@@ -1,4 +1,3 @@
-// import { ProductEntity } from '../../../domain/entities/product.entity';
 import { ImageProductEntity } from '@domain/entities/image-product.entity';
 import { ProductEntity } from '@domain/entities/product.entity';
 import { DataSource } from 'typeorm';

@@ -2,12 +2,16 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  JoinTable,
+  ManyToOne,
   OneToMany,
+  OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
 import { ShoppingCartItemsEntity } from './shopping_cart_items.entity';
 import { randomUUID } from 'crypto';
+import { CouponEntity } from './coupon.entity';
 
 @Entity({ name: 'shopping_cart' })
 export class ShoppingCartEntity {
@@ -16,6 +20,9 @@ export class ShoppingCartEntity {
 
   @Column()
   userId: string;
+
+  @ManyToOne(() => CouponEntity, (coupon) => coupon.couponProduct)
+  coupon: CouponEntity;
 
   @CreateDateColumn()
   createdAt: Date;
