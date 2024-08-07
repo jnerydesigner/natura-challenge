@@ -71,7 +71,6 @@ export const IntensCart: React.FC<ItensCartProps> = ({
 
   const removeItemCart = useMutation({
     mutationFn: async (cartItemId: string) => {
-      console.log(cartItemId);
       const response = await removeItemCartOne(cartItemId);
 
       return response;
@@ -96,9 +95,7 @@ export const IntensCart: React.FC<ItensCartProps> = ({
         />
       </div>
       <div className="h-[100%] flex flex-1 justify-between items-start flex-col">
-        <p className="text-[1.2rem] font-bold mt-4 ml-2">
-          {item.product.name} - {item.cartItemId}
-        </p>
+        <p className="text-[1.2rem] font-bold mt-4 ml-2">{item.product.name}</p>
         <p className="text-[1.4rem] font-bold mb-4 ml-2">
           {formatCurrency(Number(item.product.price))}
         </p>

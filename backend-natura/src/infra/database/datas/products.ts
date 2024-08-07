@@ -74,28 +74,6 @@ export const ProductsDatas = [
     ],
   },
   {
-    productId: '45485aa1-12e6-4a81-8c49-95ca4c8b776c',
-    rating: getRandomRating(),
-    name: 'Eau de Parfum Natura 740 Sândalo Breu Branco 50 ml Seed 2',
-    description:
-      'CUm convite a sentir os cheiros vibrantes da natureza. Combinações autorais e exclusivas dos nossos proprietários ingredientes naturais latino-americanos com ingredientes clássicos da perfumaria mundial, que surpreendem os sentidos e as emoções. Natura 740 Eau de Parfum traz uma combinação exclusiva dos óleos naturais do sândalo, um clássico da perfumaria mundial, e do breu branco, resina nativa da Amazônia.',
-    price: '500.00',
-    createdAt: '2024-08-05T19:32:20.155Z',
-    updatedAt: '2024-08-05T19:32:20.155Z',
-    productImage: [],
-  },
-  {
-    productId: '3ac8f846-3fa3-4ee9-a36c-39eeb0eae77e',
-    rating: getRandomRating(),
-    name: 'Eau de Parfum Natura 740 Sândalo Breu Branco 50 ml Seed 3',
-    description:
-      'CUm convite a sentir os cheiros vibrantes da natureza. Combinações autorais e exclusivas dos nossos proprietários ingredientes naturais latino-americanos com ingredientes clássicos da perfumaria mundial, que surpreendem os sentidos e as emoções. Natura 740 Eau de Parfum traz uma combinação exclusiva dos óleos naturais do sândalo, um clássico da perfumaria mundial, e do breu branco, resina nativa da Amazônia.',
-    price: '500.00',
-    createdAt: '2024-08-05T19:33:28.100Z',
-    updatedAt: '2024-08-05T19:33:28.100Z',
-    productImage: [],
-  },
-  {
     productId: '33a1ee4a-0e74-4252-be11-728f546f40d0',
     rating: getRandomRating(),
     name: 'Refil Desodorante Corporal Kaiak Masculino',
@@ -150,28 +128,6 @@ export const ProductsDatas = [
         updatedAt: '2024-08-05T18:15:05.598Z',
       },
     ],
-  },
-  {
-    productId: '16eb65db-8e66-4835-8823-fea8f134b631',
-    rating: getRandomRating(),
-    name: 'Eau de Parfum Natura 740 Sândalo Breu Branco 50 ml Seed',
-    description:
-      'CUm convite a sentir os cheiros vibrantes da natureza. Combinações autorais e exclusivas dos nossos proprietários ingredientes naturais latino-americanos com ingredientes clássicos da perfumaria mundial, que surpreendem os sentidos e as emoções. Natura 740 Eau de Parfum traz uma combinação exclusiva dos óleos naturais do sândalo, um clássico da perfumaria mundial, e do breu branco, resina nativa da Amazônia.',
-    price: '400.00',
-    createdAt: '2024-08-05T19:31:11.614Z',
-    updatedAt: '2024-08-05T19:31:11.614Z',
-    productImage: [],
-  },
-  {
-    productId: '1cf5b48a-8e97-4c77-bdb1-675bd416c7d8',
-    rating: getRandomRating(),
-    name: 'Eau de Parfum Natura 740 Sândalo Breu Branco 50 ml Seed 4',
-    description:
-      'CUm convite a sentir os cheiros vibrantes da natureza. Combinações autorais e exclusivas dos nossos proprietários ingredientes naturais latino-americanos com ingredientes clássicos da perfumaria mundial, que surpreendem os sentidos e as emoções. Natura 740 Eau de Parfum traz uma combinação exclusiva dos óleos naturais do sândalo, um clássico da perfumaria mundial, e do breu branco, resina nativa da Amazônia.',
-    price: '500.00',
-    createdAt: '2024-08-05T19:34:38.959Z',
-    updatedAt: '2024-08-05T19:34:38.959Z',
-    productImage: [],
   },
   {
     productId: 'b2c47010-89be-4046-ab32-97254db2f8d6',

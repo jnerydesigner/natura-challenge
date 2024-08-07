@@ -5,8 +5,10 @@ import { SelectInputSearchHome } from "./selectInputSearchHome";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { getTotalItensCart } from "@/actions/get-products";
+import { useNatura } from "@/context/naturaContext";
 
 export const Header: React.FC = () => {
+  const { cartId } = useNatura();
   const query = useQuery({
     queryKey: ["qtdCartItens"],
     queryFn: async () => {
@@ -14,9 +16,7 @@ export const Header: React.FC = () => {
       if (cart) {
         const cartItens = JSON.parse(cart);
         const cartId = cartItens.cartId.cartId;
-        const data = await getTotalItensCart(
-          "9844fd7a-e1f4-4ef4-8e91-79d0901de05b"
-        );
+        const data = await getTotalItensCart(cartId);
         return data;
       }
     },

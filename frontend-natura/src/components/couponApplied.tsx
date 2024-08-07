@@ -3,8 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { useEffect, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { addCouponInCart } from "@/actions/get-products";
-import { ToastAction } from "@/components/ui/toast";
-import { useToast } from "./ui/use-toast";
+
 import { useNatura } from "@/context/naturaContext";
 
 type Inputs = {
@@ -16,8 +15,10 @@ type LocalStorageType = {
   userId: string;
 };
 
+const cartIdStorage = localStorage.getItem("cart");
+
 export const CouponApplied: React.FC = () => {
-  const { setErrorCoupon } = useNatura();
+  const { setErrorCoupon, cartId } = useNatura();
 
   const queryClient = useQueryClient();
   const [cartStorage, setCartStorage] = useState<any>({});
@@ -34,13 +35,11 @@ export const CouponApplied: React.FC = () => {
 
   const mutation = useMutation({
     mutationFn: (coupon: string) => {
-      const couponResponse = addCouponInCart(coupon, cartStorage.cartId).catch(
-        (e) => {
-          if (e.response.data.statusCode === 404) {
-            setErrorCoupon(e.response.data.message);
-          }
+      const couponResponse = addCouponInCart(coupon, cartId).catch((e) => {
+        if (e.response.data.statusCode === 404) {
+          setErrorCoupon(e.response.data.message);
         }
-      );
+      });
 
       return couponResponse;
     },
@@ -49,6 +48,7 @@ export const CouponApplied: React.FC = () => {
   });
 
   const onSubmit: SubmitHandler<Inputs> = ({ coupon }) => {
+    console.log(coupon);
     mutation.mutate(coupon);
     reset();
   };

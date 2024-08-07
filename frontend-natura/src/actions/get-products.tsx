@@ -11,6 +11,7 @@ export const fetchGetProducts = async (page: number, limit: number) => {
   const { data } = await Api.get<IProductsResponse>(
     `/products?page=${page}&limit=${limit}`
   );
+
   return data;
 };
 
@@ -80,8 +81,9 @@ export const fetchRemoveProductItemInCart = async (
 };
 
 export const getTotalItensCart = async (cartId: string) => {
+  const cartIdRequest = "0bdb549a-d967-4dd9-bafe-f1acb7d6a54f";
   const { data } = await Api.get<number>(
-    `/shopping-cart/cart/${cartId}/total-items`
+    `/shopping-cart/cart/${cartIdRequest}/total-items`
   );
 
   return data;
@@ -100,7 +102,7 @@ export const fecthUpdateCart = async (
     quantity,
   };
   const { data } = await Api.patch<ICartResponse>("/shopping-cart", cart);
-  // console.log(cart);
+
   return cart;
 };
 

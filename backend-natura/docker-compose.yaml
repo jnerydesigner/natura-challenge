@@ -3,9 +3,11 @@ services:
     container_name: postgres-natura
     image: postgres
     environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: "123456"
-      POSTGRES_DB: "natura"
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_NAME}
+    env_file:
+      - .env
     ports:
       - "15433:5432"
     volumes:

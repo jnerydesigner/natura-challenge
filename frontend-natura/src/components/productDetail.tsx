@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { fecthUpdateCart } from "@/actions/get-products";
+import { useNatura } from "@/context/naturaContext";
 
 interface ProductDetailProps {
   dataProductResponse: IProductResponse;
@@ -23,6 +24,7 @@ interface MutationProps {
 export const ProductDetail: React.FC<ProductDetailProps> = ({
   dataProductResponse: data,
 }) => {
+  const { cartId: cartContextId } = useNatura();
   const { id: productId } = useParams<{ id: string }>();
   const safeProductId = productId ?? "";
   useEffect(() => {
@@ -68,7 +70,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({
       const response = await fecthUpdateCart(
         userId,
         productId,
-        cartId,
+        cartContextId,
         quantity
       );
 
@@ -140,7 +142,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({
                   mutation.mutate({
                     userId,
                     productId: producIdLocalStorage,
-                    cartId,
+                    cartId: cartId,
                     quantity: 1,
                   })
                 }
