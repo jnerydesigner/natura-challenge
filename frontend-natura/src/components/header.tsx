@@ -38,7 +38,9 @@ export const Header: React.FC = () => {
         <Link to={"/cart"}>
           <IoCartOutline className="mr-[40px] text-[1.4rem]" />
         </Link>
-        <FaRegCircleUser />
+        <Link to={"/login"}>
+          <FaRegCircleUser className="text-[1.4rem]" />
+        </Link>
 
         <div className="h-[20px] w-[20px] bg-trash flex justify-center items-center rounded-[50%] absolute top-[1px] left-10">
           <span className="text-[0.6rem] text-white font-bold">

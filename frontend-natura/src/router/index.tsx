@@ -3,6 +3,7 @@ import Home from "../pages/home";
 import Cart from "../pages/cart";
 import Products from "../pages/products";
 import Product from "../pages/product";
+import Login from "@/pages/login";
 
 export default function RouterNatura() {
   return (
@@ -13,6 +14,7 @@ export default function RouterNatura() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/products" element={<Products />} />
           <Route path="/product/:id" element={<Product />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </>
