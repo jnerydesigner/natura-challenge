@@ -7,7 +7,7 @@ export type UpdatedCartDTO = {
   userId: string;
   productId: string;
   cartId: string;
-  quantity: number;
+  quantity?: number;
 };
 
 export type DeleteItemCartDTO = {

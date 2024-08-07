@@ -348,4 +348,39 @@ export class ShoppingCartService {
 
     return cart;
   }
+
+  async getTotalItens(cartId: string) {
+    const cart = await this.shoopingCartRepository.findOne({
+      where: {
+        cartId,
+      },
+      relations: {
+        cartItems: {
+          product: true,
+        },
+      },
+    });
+
+    if (!cart) {
+      throw new NotFoundException('Cart not found');
+    }
+
+    const totalItens = cart.cartItems.length;
+
+    return totalItens;
+  }
+
+  async removeOneItemCart(itemCartId: string) {
+    const itemCart = await this.shoppingCartItemsRepository.findOne({
+      where: {
+        cartItemId: itemCartId,
+      },
+    });
+
+    if (!itemCart) {
+      throw new NotFoundException('Item not found');
+    }
+
+    await this.shoppingCartItemsRepository.delete(itemCartId);
+  }
 }

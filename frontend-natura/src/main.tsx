@@ -16,7 +16,7 @@ const queryClient = new QueryClient({
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <main className="w-[100%] h-[auto] flex justify-start items-center flex-col bg-graylight">
+      <main className="w-[100%] h-full flex justify-start items-center flex-col bg-gray-200">
         <RouterNatura />
       </main>
       <ReactQueryDevtools initialIsOpen={false} />

@@ -60,4 +60,14 @@ export class ShoppingCartController {
   async getCartItems(@Param('cartId') cartId: string) {
     return this.shoppingCartService.findCart(cartId);
   }
+
+  @Get('/cart/:cartId/total-items')
+  getTotalItens(@Param('cartId') cartId: string) {
+    return this.shoppingCartService.getTotalItens(cartId);
+  }
+
+  @Delete('/cart/:itemCartId')
+  deleteItemCartId(@Param('itemCartId') itemCartId: string) {
+    return this.shoppingCartService.removeOneItemCart(itemCartId);
+  }
 }

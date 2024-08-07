@@ -8,11 +8,12 @@ import { useCartData } from "@/context/useCartData";
 
 export default function Cart() {
   const { data } = useCartData();
+
   return (
     <>
       <Promotions />
       <Header />
-      <div className="w-8/12 bg-white px-[20px]">
+      <div className="w-8/12 h-[100vh] bg-white px-[20px]">
         <div className="h-[80px] flex justify-start items-center ml-4">
           <BreadCrumbsNatura page="Carrinho" />
         </div>
@@ -26,10 +27,12 @@ export default function Cart() {
                 key={item.product.productId}
                 lastProduct={index !== data.cartItems.length - 1}
                 item={item}
+                cartId={data.cartId}
+                userId={data.userId}
               />
             ))}
           </div>
-          <Summary />
+          <Summary cart={data ? data : null} />
         </div>
       </div>
     </>
