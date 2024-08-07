@@ -37,7 +37,7 @@ yarn start:dev
 2.1 Navegue até a pasta de frontend e rode os seguintes comandos:
 
 ```
-dev
+yarn dev
 
 ```
 
