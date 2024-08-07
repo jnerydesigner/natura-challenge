@@ -1,4 +1,4 @@
-@startuml Diagrama do E-commerce
+@startuml Diagrama do E-commerce da Natura
 entity "Users" as Users {
     * user_id : UUID <<PK>>
     --
