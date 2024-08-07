@@ -87,4 +87,5 @@ Users ||--|| ShoppingCart : "1:1"
 ShoppingCart ||--o{ ShoppingCartItems : "1:N"
 Products ||--o{ ShoppingCartItems : "1:N"
 Products ||--o{ ImageProduct : "1:N"
+Coupon ||--o{ ShoppingCart : "1:N"
 @enduml
